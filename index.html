@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>نظام محاسبي - دفتر الأستاذ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📒 دفتر المحاسبة</h1>
+        
+        <!-- عرض الرصيد الحالي -->
+        <div class="balance-card">
+            <h3>الرصيد الحالي</h3>
+            <div class="balance-amount" id="balanceAmount">0</div>
+            <div class="balance-date" id="currentDate"></div>
+        </div>
+
+        <!-- نموذج إضافة معاملة جديدة -->
+        <div class="form-card">
+            <h3>إضافة معاملة جديدة</h3>
+            <input type="text" id="desc" placeholder="الوصف (مثل: راتب، فاتورة كهرباء)" autocomplete="off">
+            <input type="number" id="amount" placeholder="المبلغ" autocomplete="off">
+            <select id="type">
+                <option value="income">💰 إيراد (دخل)</option>
+                <option value="expense">💸 مصروف (خرج)</option>
+            </select>
+            <button id="addBtn">➕ إضافة المعاملة</button>
+        </div>
+
+        <!-- قائمة المعاملات -->
+        <div class="transactions-header">
+            <h3>جميع المعاملات</h3>
+            <button id="clearAllBtn" class="clear-btn">🗑️ مسح الكل</button>
+        </div>
+        <div id="transactionsList" class="transactions-list">
+            <!-- ستظهر المعاملات هنا ديناميكياً -->
+            <div class="empty-msg">لا توجد معاملات، أضف معاملة جديدة</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
