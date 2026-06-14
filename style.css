@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI', 'Tahoma', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* بطاقة الرصيد */
+.balance-card {
+    background: linear-gradient(135deg, #1e3c72, #2b4c8a);
+    color: white;
+    padding: 20px;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.balance-card h3 {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    word-break: break-word;
+}
+
+.balance-date {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* نموذج الإضافة */
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-card h3 {
+    margin-bottom: 15px;
+    color: #1e3c72;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2b4c8a;
+    box-shadow: 0 0 0 2px rgba(43,76,138,0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2b4c8a;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1e3c72;
+    transform: scale(0.98);
+}
+
+/* رأس قائمة المعاملات */
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 20px 0 12px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.clear-btn {
+    background: #dc3545;
+    width: auto;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.clear-btn:hover {
+    background: #b02a37;
+}
+
+/* قائمة المعاملات */
+.transactions-list {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+    transition: 0.1s;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-desc {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.transaction-date {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    margin-left: 12px;
+    min-width: 85px;
+    text-align: left;
+}
+
+.income-amount {
+    color: #28a745;
+}
+
+.expense-amount {
+    color: #dc3545;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #aaa;
+    width: 40px;
+    padding: 5px;
+    transition: 0.1s;
+}
+
+.delete-btn:hover {
+    color: #dc3545;
+    transform: scale(1.1);
+    background: none;
+}
+
+.empty-msg {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+    .balance-amount {
+        font-size: 2rem;
+    }
+    .transaction-item {
+        flex-wrap: wrap;
+    }
+    .transaction-amount {
+        width: 100%;
+        text-align: right;
+        margin-top: 8px;
+        margin-left: 0;
+    }
+}
